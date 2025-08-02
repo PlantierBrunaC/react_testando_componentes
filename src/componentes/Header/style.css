@@ -1,31 +1,62 @@
-/* src/componentes/Cabecalho/estilos.css */
-
+/* Cabeçalho principal */
 .cabecalho {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 120px;
+  background-color: #4b69fd;
+  padding-top: 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-.imagem-logo {
-    background-image: url("/public/imagens/logo.png");
-    width: 351px;
-    height: 117px;
+/* Container interno */
+.cabecalho-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 2rem;
+  position: relative;
 }
 
+/* Logo */
+.imagem-logo img {
+  width: 351px;
+  height: auto;
+}
+
+/* Participante */
 .participante {
-    z-index: 1;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  z-index: 10;
+  width: 300px;
+  height: auto;
 }
 
+/* Mobile */
 @media screen and (max-width: 800px) {
-    .cabecalho {
-        padding-top: 60px;
-        flex-direction: column;
-        align-items: center;
-    }
+  .cabecalho {
+    padding-top: 60px;
+  }
 
-    .imagem-logo {
-        background-image: url("/public/imagens/logo-pequeno.png");
-        width: 235px;
-        height: 199px;
-    }
+  .cabecalho-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.imagem-logo img {
+    width: 235px;
+    height: auto;
+    margin-bottom: 110px;
+  }
+
+  .participante {
+    position: absolute;
+    left: 50%;
+    bottom: -18px;
+    transform: translateX(-50%);
+    width: 250px;
+  }
 }
