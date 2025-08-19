@@ -1,7 +1,7 @@
 import { act, fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
-import Formulario from "./Formulario";
 import { RecoilRoot } from "recoil";
+import Formulario from "../Formulario/Formulario";
 
 
 describe('Comportamento do formulário de adição de participantes - Formulario.tsx', () => {

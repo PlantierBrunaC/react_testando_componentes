@@ -1,4 +1,4 @@
-import Formulario from "../../componentes/Formulario";
+import Formulario from "../../componentes/Formulario/Formulario";
 import IniciarSorteio from "../../componentes/IniciarSorteio/IniciarSorteio";
 import ListaParticipantes from "../../componentes/ListaParticipantes/ListaParticipantes";
 

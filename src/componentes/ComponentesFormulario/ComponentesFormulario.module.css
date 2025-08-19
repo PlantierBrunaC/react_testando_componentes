@@ -1,0 +1,91 @@
+/* ===== Input / Select ===== */
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #00000033; /* contorno leve */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25); /* sombra externa */
+  padding: 10px 16px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.campo {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8); /* texto visível */
+  padding: 4px 0; /* remove padding lateral, preserva altura */
+}
+
+.campo::placeholder {
+  color: rgba(0, 0, 0, 0.3); /* placeholder mais suave */
+}
+
+.campo:focus {
+  border: none;
+  outline: none;
+}
+
+/* ===== Select específico (usando mesma classe campo) ===== */
+select.campo {
+  background-color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 16px;
+  border: 1px solid #00000033;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  appearance: none;
+  margin: 20px 0;
+}
+
+select.campo:focus {
+  border: 2px solid #fe652b;
+  box-shadow: 0 0 0 4px #fe652b44;
+  outline: none;
+}
+
+/* ===== Botões ===== */
+
+.botao {
+  padding: 10px 20px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.enabled {
+  background-color: #fe652b;
+  color: #ffffff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.enabled:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+}
+
+.disabled {
+  background-color: #c4c4c4;
+  color: #ffffff;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}

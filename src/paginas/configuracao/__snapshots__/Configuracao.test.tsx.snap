@@ -4,15 +4,21 @@ exports[`Página de configuracao Página deve ser renderizada corretamente 1`] =
 <div>
   <form>
     <h1>
-      Vamos começar !
+      Vamos começar!
     </h1>
-    <input
-      placeholder="Insira os nomes dos participantes"
-      type="text"
-      value=""
-    />
+    <div
+      class="inputWrapper"
+    >
+      <input
+        class="campo"
+        placeholder="Insira os nomes dos participantes"
+        value=""
+      />
+    </div>
     <button
+      class="botao disabled"
       disabled=""
+      type="submit"
     >
       Adicionar
     </button>

@@ -3,6 +3,7 @@ import { RecoilRoot } from "recoil"
 import IniciarSorteio from "./IniciarSorteio"
 import React from "react"
 import { useListaDeParticipantes } from "../../state/hook/useListaDeParticipantes"
+import { useSorteador } from "../../state/hook/useSorteador"
 
 
 jest.mock('../../state/hook/useListaDeParticipantes', () => {
@@ -15,6 +16,13 @@ const mockNavegacao = jest.fn()
 jest.mock('react-router-dom', () =>{
     return {
         useNavigate: () => mockNavegacao
+    }
+})
+
+const mockSorteio = jest.fn()
+jest.mock('../../state/hook/useSorteador', () =>{
+    return {
+        useSorteador: () => mockSorteio
     }
 })
 
@@ -65,6 +73,7 @@ describe('Lista de participantes possui participantes suficiente', () => {
         fireEvent.click(botao)
         expect(mockNavegacao).toHaveBeenCalledTimes(1)  
         expect(mockNavegacao).toHaveBeenCalledWith('/sorteio')  
+        expect(mockSorteio).toHaveBeenCalledTimes(1)  
     })
 
     })

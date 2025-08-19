@@ -4,7 +4,7 @@ import Header from './componentes/Header';
 import Main from './componentes/Main';
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import { RecoilRoot } from 'recoil';
-import Formulario from './componentes/Formulario';
+import Formulario from './componentes/Formulario/Formulario';
 
 function App() {
   return (
